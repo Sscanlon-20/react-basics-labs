@@ -2,12 +2,25 @@ import React from "react";
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import MenuItem from '@mui/material/MenuItem';
 
+const tasks = [
+  {
+    value: 'low',
+    label: 'low',
+  },
+  {
+    value: 'medium',
+    label: 'medium',
+  },
+  {
+    value: 'high',
+    label: 'high',
+  },
+ 
+];
 
 const AddTaskForm = (props) => {
-  
-
-
   return (
     <div>
         <Box
@@ -27,6 +40,7 @@ const AddTaskForm = (props) => {
           onChange={(event) => props.change(event)}
         />
       </div>
+
       <div>
         <TextField
           required
@@ -37,7 +51,23 @@ const AddTaskForm = (props) => {
           onChange={(event) => props.change(event)}
         />
       </div>
-      
+        
+        <div>
+        <TextField
+          required
+          id="outlined-select-task"
+          select
+          label="priority"
+          InputLabelProps={{ shrink: true }}
+          onChange={(event) => props.change(event)}
+        >
+        {tasks.map((option) => (
+            <MenuItem key={option.value} value={option.label}>
+              {option.label} 
+            </MenuItem>
+          ))}</TextField>
+      </div>
+
       <div>
         <TextField
           name="description"

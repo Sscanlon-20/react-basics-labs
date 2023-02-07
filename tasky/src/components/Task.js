@@ -47,12 +47,16 @@ const Task = (props) => {
                 </Box>
 
                 <Chip 
+                label= {props.priority}
                        sx={{
+                        backgroundColor: props.priority === "Low" ? '#8bc34a': props.priority === "High" ? '#f44336' : '#fbc02d',
                         display: 'flex',
                         justifyContent: 'center',
-                        alignItems: 'baseline',
+                        color: 'white',
+                        fontSize: 20,
                         mb: 4,
                         padding: '20px',
+                        fontWeight: 'bold',
                     }}/>
 
                 <Typography
