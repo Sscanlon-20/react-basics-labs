@@ -49,7 +49,7 @@ const Task = (props) => {
                 <Chip 
                 label= {props.priority}
                        sx={{
-                        backgroundColor: props.priority === "Low" ? '#8bc34a': props.priority === "High" ? '#f44336' : '#fbc02d',
+                        backgroundColor: props.priority === "LOW" ? '#8bc34a': props.priority === "HIGH" ? '#f44336' : '#fbc02d',
                         display: 'flex',
                         justifyContent: 'center',
                         color: 'white',

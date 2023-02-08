@@ -7,15 +7,15 @@ import MenuItem from '@mui/material/MenuItem';
 const tasks = [
   {
     value: 'low',
-    label: 'low',
+    label: 'LOW',
   },
   {
     value: 'medium',
-    label: 'medium',
+    label: 'MEDIUM',
   },
   {
     value: 'high',
-    label: 'high',
+    label: 'HIGH',
   },
  
 ];
@@ -60,6 +60,8 @@ const AddTaskForm = (props) => {
           label="priority"
           InputLabelProps={{ shrink: true }}
           onChange={(event) => props.change(event)}
+          name="priority"
+          defaultValue=""
         >
         {tasks.map((option) => (
             <MenuItem key={option.value} value={option.label}>

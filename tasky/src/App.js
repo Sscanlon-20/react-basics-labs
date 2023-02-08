@@ -12,9 +12,9 @@ import Grid from '@mui/material/Grid';
 function App() {
   const [ taskState, setTaskState ] = useState({
     tasks: [
-      { id: 1, title:"Dishes", description: "Empty dishwasher", priority: "Low", deadline: "Today", done: false },
-      { id: 2, title: "Laundry", description: "Fold clothes and put away", priority: "Medium", deadline: "Tomorrow", done: false },
-      { id: 3, title: "Tidy up", description: "Pick up all clothes, shoes and toys", priority: "High", deadline: "Today", done: false},   
+      { id: 1, title:"Dishes", description: "Empty dishwasher", priority: "LOW", deadline: "Today", done: false },
+      { id: 2, title: "Laundry", description: "Fold clothes and put away", priority: "MEDIUM", deadline: "Tomorrow", done: false },
+      { id: 3, title: "Tidy up", description: "Pick up all clothes, shoes and toys", priority: "HIGH", deadline: "Today", done: false},   
     ]
   });
 
